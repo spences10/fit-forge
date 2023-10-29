@@ -1,1 +1,1 @@
-export { calculate_bmi } from './util';
+export * from './conversions';
