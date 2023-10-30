@@ -36,10 +36,6 @@ jobs:
         run: npx vercel pull --token ${{ secrets.FIT_FORGE_GITHUB_ACTIONS }} --yes
       - name: Vercel Build
         run: npx vercel build
-      # - name: Prepare build output
-      #   run: |
-      #     mkdir -p .vercel/cache/output
-      #     mv build/* .vercel/cache/output/
       - name: Deploy to Vercel
         if: ${{ success() }}
         run: |
