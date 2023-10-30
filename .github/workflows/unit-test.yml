@@ -31,3 +31,7 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm run test:ci
+      - name: Deploy to Vercel
+        if: ${{ success() }}
+        run: |
+          npx vercel --token ${{ secrets.FIT_FORGE_GITHUB_ACTIONS }} --prebuilt
