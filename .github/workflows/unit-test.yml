@@ -31,7 +31,10 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm run test:ci
-      - name: Build
+      - name: Vercel Pull
+        # prettier-ignore
+        run: npx vercel pull --token ${{ secrets.FIT_FORGE_GITHUB_ACTIONS }} --yes
+      - name: Vercel Build
         run: npx vercel build
       # - name: Prepare build output
       #   run: |
