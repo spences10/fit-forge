@@ -31,10 +31,16 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm run test:ci
+      - name: Build
+        run: pnpm run build
+      - name: Prepare build output
+        run: |
+          mkdir -p .vercel/cache/output
+          mv build/* .vercel/cache/output/
       - name: Deploy to Vercel
         if: ${{ success() }}
         run: |
-          npx vercel --token ${{ secrets.FIT_FORGE_GITHUB_ACTIONS }} --prebuilt --confirm
+          npx vercel --token ${{ secrets.FIT_FORGE_GITHUB_ACTIONS }} --prebuilt --yes
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
