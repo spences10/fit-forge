@@ -32,11 +32,11 @@ jobs:
       - name: Test
         run: pnpm run test:ci
       - name: Build
-        run: pnpm run build
-      - name: Prepare build output
-        run: |
-          mkdir -p .vercel/cache/output
-          mv build/* .vercel/cache/output/
+        run: npx vercel build
+      # - name: Prepare build output
+      #   run: |
+      #     mkdir -p .vercel/cache/output
+      #     mv build/* .vercel/cache/output/
       - name: Deploy to Vercel
         if: ${{ success() }}
         run: |
