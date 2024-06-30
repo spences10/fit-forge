@@ -58,7 +58,7 @@ devDependencies:
     version: 4.2.18
   svelte-check:
     specifier: ^3.7.0
-    version: 3.8.2(postcss-load-config@6.0.1)(postcss@8.4.38)(svelte@4.2.18)
+    version: 3.8.4(postcss-load-config@6.0.1)(postcss@8.4.38)(svelte@4.2.18)
   tailwindcss:
     specifier: ^3.4.3
     version: 3.4.4
@@ -1919,6 +1919,13 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
+  /minimatch@9.0.5:
+    resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
@@ -2575,8 +2582,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check@3.8.2(postcss-load-config@6.0.1)(postcss@8.4.38)(svelte@4.2.18):
-    resolution: {integrity: sha512-n6bVsE71RPuMXZz1CalD2fXO0RIyEDHn1YdGhcFEwZrwc/HoS5wWoEvEe+mcL9tivCTRtQIdbxLLStfIHFOX+Q==}
+  /svelte-check@3.8.4(postcss-load-config@6.0.1)(postcss@8.4.38)(svelte@4.2.18):
+    resolution: {integrity: sha512-61aHMkdinWyH8BkkTX9jPLYxYzaAAz/FK/VQqdr2FiCQQ/q04WCwDlpGbHff1GdrMYTmW8chlTFvRWL9k0A8vg==}
     hasBin: true
     peerDependencies:
       svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
