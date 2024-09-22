@@ -29,26 +29,69 @@
 	};
 </script>
 
-<input type="number" bind:value={weight} placeholder="Weight" />
-<select bind:value={weight_unit}>
-	<option value="kg" selected>kg</option>
-	<option value="lb">lb</option>
-	<option value="st">st</option>
-</select>
-<input type="number" bind:value={height} placeholder="Height" />
-<select bind:value={height_unit}>
-	<option value="cm">cm</option>
-	<option value="m" selected>m</option>
-	<option value="in">in</option>
-	<option value="ft">ft</option>
-</select>
-<button on:click={handle_calculate}>Calculate BMI</button>
+<h2 class="mb-6 text-2xl font-bold">BMI Calculator</h2>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+	<div class="form-control w-full">
+		<label class="label" for="weight">
+			<span class="label-text">Weight</span>
+		</label>
+		<div class="flex">
+			<input
+				type="number"
+				bind:value={weight}
+				placeholder="Weight"
+				class="input input-bordered w-full rounded-r-none"
+				id="weight"
+			/>
+			<select
+				bind:value={weight_unit}
+				class="select select-bordered rounded-l-none"
+			>
+				<option value="kg" selected>kg</option>
+				<option value="lb">lb</option>
+				<option value="st">st</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-control w-full">
+		<label class="label" for="height">
+			<span class="label-text">Height</span>
+		</label>
+		<div class="flex">
+			<input
+				type="number"
+				bind:value={height}
+				placeholder="Height"
+				class="input input-bordered w-full rounded-r-none"
+				id="height"
+			/>
+			<select
+				bind:value={height_unit}
+				class="select select-bordered rounded-l-none"
+			>
+				<option value="cm">cm</option>
+				<option value="m" selected>m</option>
+				<option value="in">in</option>
+				<option value="ft">ft</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+<button
+	on:click={handle_calculate}
+	class="btn btn-primary mt-6 w-full md:w-auto">Calculate BMI</button
+>
 
 {#if bmi}
-	<p>Your BMI is {bmi} - {category}</p>
-	<p>
-		Ideal weight range: {ideal_weight?.lower_weight.toFixed(1)}
-		{weight_unit} to {ideal_weight?.upper_weight.toFixed(1)}
-		{weight_unit}
-	</p>
+	<div class="mt-6 rounded-box bg-base-200 p-4">
+		<p class="text-lg font-semibold">
+			Your BMI is {bmi} - {category}
+		</p>
+		<p class="mt-2">
+			Ideal weight range: {ideal_weight?.lower_weight.toFixed(1)}
+			{weight_unit} to {ideal_weight?.upper_weight.toFixed(1)}
+			{weight_unit}
+		</p>
+	</div>
 {/if}
