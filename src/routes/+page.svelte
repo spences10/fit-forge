@@ -18,9 +18,14 @@
 			user_data.height_unit === 'cm'
 				? user_data.height / 100
 				: user_data.height_unit === 'ft'
-				? user_data.height * 0.3048
-				: user_data.height;
-		bmi = calculate_bmi(user_data.weight, user_data.height, user_data.weight_unit, user_data.height_unit);
+					? user_data.height * 0.3048
+					: user_data.height;
+		bmi = calculate_bmi(
+			user_data.weight,
+			user_data.height,
+			user_data.weight_unit,
+			user_data.height_unit,
+		);
 		category = get_bmi_category(parseFloat(bmi));
 		ideal_weight = get_ideal_weight(height_m, user_data.weight_unit);
 	};
@@ -28,18 +33,25 @@
 
 <div class="space-y-12">
 	<section class="text-center">
-		<h1 class="text-4xl font-bold mb-4">Welcome to Fit Forge</h1>
-		<p class="text-xl">Your personal fitness companion for a healthier lifestyle</p>
+		<h1 class="mb-4 text-4xl font-bold">Welcome to Fit Forge</h1>
+		<p class="text-xl">
+			Your personal fitness companion for a healthier lifestyle
+		</p>
 	</section>
 
-	<section class="grid md:grid-cols-2 gap-8">
+	<section class="grid gap-8 md:grid-cols-2">
 		<div>
-			<h2 class="text-2xl font-bold mb-4">About Fit Forge</h2>
-			<p>Fit Forge is your all-in-one fitness solution, designed to help you achieve your health and wellness goals. Whether you're just starting your fitness journey or looking to take your workouts to the next level, we've got you covered.</p>
+			<h2 class="mb-4 text-2xl font-bold">About Fit Forge</h2>
+			<p>
+				Fit Forge is your all-in-one fitness solution, designed to
+				help you achieve your health and wellness goals. Whether
+				you're just starting your fitness journey or looking to take
+				your workouts to the next level, we've got you covered.
+			</p>
 		</div>
 		<div>
-			<h2 class="text-2xl font-bold mb-4">Key Features</h2>
-			<ul class="list-disc list-inside">
+			<h2 class="mb-4 text-2xl font-bold">Key Features</h2>
+			<ul class="list-inside list-disc">
 				<li>Personalized workout plans</li>
 				<li>Nutrition tracking and advice</li>
 				<li>Progress monitoring</li>
@@ -49,7 +61,7 @@
 	</section>
 
 	<section>
-		<h2 class="text-2xl font-bold mb-6">BMI Calculator</h2>
+		<h2 class="mb-6 text-2xl font-bold">BMI Calculator</h2>
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 			<div class="form-control w-full">
 				<label class="label" for="weight">
@@ -68,8 +80,8 @@
 						class="select select-bordered rounded-l-none"
 					>
 						<option value="kg" selected>kg</option>
-							<option value="lb">lb</option>
-							<option value="st">st</option>
+						<option value="lb">lb</option>
+						<option value="st">st</option>
 					</select>
 				</div>
 			</div>
@@ -100,7 +112,8 @@
 
 		<button
 			onclick={handle_calculate}
-			class="btn btn-primary mt-6 w-full md:w-auto">Calculate BMI</button
+			class="btn btn-primary mt-6 w-full md:w-auto"
+			>Calculate BMI</button
 		>
 
 		{#if bmi}
@@ -110,7 +123,9 @@
 				</p>
 				<p class="mt-2">
 					Ideal weight range: {ideal_weight?.lower_weight.toFixed(1)}
-					{user_data.weight_unit} to {ideal_weight?.upper_weight.toFixed(1)}
+					{user_data.weight_unit} to {ideal_weight?.upper_weight.toFixed(
+						1,
+					)}
 					{user_data.weight_unit}
 				</p>
 			</div>

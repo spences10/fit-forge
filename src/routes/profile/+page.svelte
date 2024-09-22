@@ -7,7 +7,7 @@
 	});
 </script>
 
-<h1 class="text-3xl font-bold mb-6">User Profile</h1>
+<h1 class="mb-6 text-3xl font-bold">User Profile</h1>
 
 <div class="card bg-base-100 shadow-xl">
 	<div class="card-body">

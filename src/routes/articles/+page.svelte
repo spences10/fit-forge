@@ -3,22 +3,25 @@
 		{
 			id: 1,
 			title: 'Understanding BMI',
-			excerpt: 'Learn about Body Mass Index and its importance in health assessment.',
+			excerpt:
+				'Learn about Body Mass Index and its importance in health assessment.',
 		},
 		{
 			id: 2,
 			title: 'The Importance of Macronutrients',
-			excerpt: 'Discover how proteins, carbohydrates, and fats contribute to your overall health.',
+			excerpt:
+				'Discover how proteins, carbohydrates, and fats contribute to your overall health.',
 		},
 		{
 			id: 3,
 			title: 'Effective Weight Management Strategies',
-			excerpt: 'Explore evidence-based approaches to maintaining a healthy weight.',
+			excerpt:
+				'Explore evidence-based approaches to maintaining a healthy weight.',
 		},
 	]);
 </script>
 
-<h1 class="text-3xl font-bold mb-6">Educational Articles</h1>
+<h1 class="mb-6 text-3xl font-bold">Educational Articles</h1>
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 	{#each articles as article}

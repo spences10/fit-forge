@@ -6,7 +6,7 @@
 	]);
 </script>
 
-<h1 class="text-3xl font-bold mb-6">Workouts</h1>
+<h1 class="mb-6 text-3xl font-bold">Workouts</h1>
 
 <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 	{#each workouts as workout}

@@ -14,21 +14,29 @@
 
 	const calculate_macros = () => {
 		// Convert weight to kg if necessary
-		const weight_kg = user_data.weight_unit === 'lb' 
-			? user_data.weight * 0.453592 
-			: user_data.weight;
+		const weight_kg =
+			user_data.weight_unit === 'lb'
+				? user_data.weight * 0.453592
+				: user_data.weight;
 
 		// Convert height to cm if necessary
-		const height_cm = user_data.height_unit === 'm' 
-			? user_data.height * 100 
-			: user_data.height_unit === 'ft' 
-				? user_data.height * 30.48 
-				: user_data.height;
+		const height_cm =
+			user_data.height_unit === 'm'
+				? user_data.height * 100
+				: user_data.height_unit === 'ft'
+					? user_data.height * 30.48
+					: user_data.height;
 
 		const bmr =
 			gender === 'male'
-				? 88.362 + 13.397 * weight_kg + 4.799 * height_cm - 5.677 * age
-				: 447.593 + 9.247 * weight_kg + 3.098 * height_cm - 4.33 * age;
+				? 88.362 +
+					13.397 * weight_kg +
+					4.799 * height_cm -
+					5.677 * age
+				: 447.593 +
+					9.247 * weight_kg +
+					3.098 * height_cm -
+					4.33 * age;
 
 		const activity_multipliers = {
 			sedentary: 1.2,
