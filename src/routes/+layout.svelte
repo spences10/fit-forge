@@ -15,8 +15,9 @@
 			<div class="flex-none">
 				<ul class="menu menu-horizontal px-1">
 					<li><a href="/">Home</a></li>
+					<li><a href="/articles">Articles</a></li>
 					<li><a href="/workouts">Workouts</a></li>
-					<li><a href="/profile">Profile</a></li>
+					<li><a href="/macro-calculator">Macro Calculator</a></li>
 				</ul>
 			</div>
 		</header>
