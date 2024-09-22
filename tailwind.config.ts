@@ -7,5 +7,11 @@ export default {
 		extend: {},
 	},
 
+	daisyui: {
+		darkTheme: 'night',
+		themes: ['garden'],
+		logs: false,
+	},
+
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 } as Config;
