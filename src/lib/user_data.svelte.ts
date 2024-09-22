@@ -1,5 +1,6 @@
 import type {
 	ActivityLevel,
+	DayType,
 	Goal,
 } from '$lib/config/macro_calculator';
 import { calculate_macros } from '$lib/conversions/weight';
@@ -13,6 +14,7 @@ export function create_user_data() {
 	let gender = $state<'male' | 'female'>('male');
 	let activity_level = $state<ActivityLevel>('sedentary');
 	let goal = $state<Goal>('maintain');
+	let day_type = $state<DayType>('rest');
 	let macros = $state<ReturnType<typeof calculate_macros> | null>(
 		null,
 	);
@@ -85,6 +87,13 @@ export function create_user_data() {
 		},
 		set goal(value: Goal) {
 			goal = value;
+			update_macros();
+		},
+		get day_type() {
+			return day_type;
+		},
+		set day_type(value: DayType) {
+			day_type = value;
 			update_macros();
 		},
 		get macros() {

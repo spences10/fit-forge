@@ -5,6 +5,8 @@
 	} from '$lib/config/macro_calculator';
 	import { user_data } from '$lib/user_data.svelte';
 
+	let show_leangains = $state(false);
+
 	$effect(() => {
 		if (user_data.weight && user_data.height && user_data.age) {
 			user_data.update_macros();
@@ -91,12 +93,38 @@
 	</div>
 </div>
 
+<button
+	onclick={() => (show_leangains = !show_leangains)}
+	class="btn btn-secondary mt-6"
+>
+	{show_leangains ? 'Hide' : 'Show'} Leangains Options
+</button>
+
 {#if user_data.macros}
-	<div class="mt-6 rounded-box bg-base-200 p-4">
-		<h2 class="mb-2 text-xl font-semibold">Your Daily Macros</h2>
-		<p>Calories: {user_data.macros.calories} kcal</p>
-		<p>Protein: {user_data.macros.protein}g</p>
-		<p>Carbohydrates: {user_data.macros.carbs}g</p>
-		<p>Fat: {user_data.macros.fat}g</p>
-	</div>
+	{#if !show_leangains}
+		<div class="mt-6 rounded-box bg-base-200 p-4">
+			<h2 class="mb-2 text-xl font-semibold">Your Daily Macros</h2>
+			<p>Calories: {user_data.macros.standard.calories} kcal</p>
+			<p>Protein: {user_data.macros.standard.protein}g</p>
+			<p>Carbohydrates: {user_data.macros.standard.carbs}g</p>
+			<p>Fat: {user_data.macros.standard.fat}g</p>
+		</div>
+	{:else}
+		<div class="mt-6 grid gap-6 md:grid-cols-2">
+			<div class="rounded-box bg-base-200 p-4">
+				<h2 class="mb-2 text-xl font-semibold">Workout Day Macros</h2>
+				<p>Calories: {user_data.macros.workout.calories} kcal</p>
+				<p>Protein: {user_data.macros.workout.protein}g</p>
+				<p>Carbohydrates: {user_data.macros.workout.carbs}g</p>
+				<p>Fat: {user_data.macros.workout.fat}g</p>
+			</div>
+			<div class="rounded-box bg-base-200 p-4">
+				<h2 class="mb-2 text-xl font-semibold">Rest Day Macros</h2>
+				<p>Calories: {user_data.macros.rest.calories} kcal</p>
+				<p>Protein: {user_data.macros.rest.protein}g</p>
+				<p>Carbohydrates: {user_data.macros.rest.carbs}g</p>
+				<p>Fat: {user_data.macros.rest.fat}g</p>
+			</div>
+		</div>
+	{/if}
 {/if}
