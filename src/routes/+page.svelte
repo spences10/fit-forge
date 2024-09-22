@@ -173,25 +173,29 @@
 		{#if show_results}
 			<div
 				transition:slide={{ duration: 300 }}
-				class="mt-6 rounded-box bg-base-200 p-4"
+				class="mt-6 grid gap-6 md:grid-cols-2"
 			>
-				<p class="text-lg font-semibold">
-					Your BMI is {bmi} - {category}
-				</p>
-				<p class="mt-2">
-					Ideal weight range: {ideal_weight?.lower_weight.toFixed(1)}
-					{user_data.weight_unit} to {ideal_weight?.upper_weight.toFixed(
-						1,
-					)}
-					{user_data.weight_unit}
-				</p>
-				<p class="mt-4 text-sm">
-					Remember, BMI is just one indicator of health. Consider
-					consulting with a healthcare professional for a more
-					comprehensive assessment.
-				</p>
+				<div class="rounded-box bg-base-200 p-4">
+					<p class="text-lg font-semibold">
+						Your BMI is {bmi} - {category}
+					</p>
+					<p class="mt-2">
+						Ideal weight range: {ideal_weight?.lower_weight.toFixed(
+							1,
+						)}
+						{user_data.weight_unit} to {ideal_weight?.upper_weight.toFixed(
+							1,
+						)}
+						{user_data.weight_unit}
+					</p>
+					<p class="mt-4 text-sm">
+						Remember, BMI is just one indicator of health. Consider
+						consulting with a healthcare professional for a more
+						comprehensive assessment.
+					</p>
+				</div>
 
-				<div class="mt-6 rounded-box bg-base-300 p-4">
+				<div class="rounded-box bg-base-300 p-4">
 					<h3 class="mb-2 text-lg font-semibold">
 						Next Step: Calculate Your Macros
 					</h3>
