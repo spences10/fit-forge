@@ -35,7 +35,8 @@
 	<section class="text-center">
 		<h1 class="mb-4 text-4xl font-bold">Welcome to Fit Forge</h1>
 		<p class="text-xl">
-			Your personal fitness companion for a healthier lifestyle
+			Your no-nonsense guide to getting fit, especially for the
+			desk-bound developer
 		</p>
 	</section>
 
@@ -43,19 +44,26 @@
 		<div>
 			<h2 class="mb-4 text-2xl font-bold">About Fit Forge</h2>
 			<p>
-				Fit Forge is your all-in-one fitness solution, designed to
-				help you achieve your health and wellness goals. Whether
-				you're just starting your fitness journey or looking to take
-				your workouts to the next level, we've got you covered.
+				Fit Forge is designed for developers and other sedentary
+				professionals who want to improve their fitness without the
+				fluff. We focus on the essentials: understanding your body
+				composition and optimizing your diet. Remember, you can't
+				outrun a bad diet!
 			</p>
 		</div>
 		<div>
-			<h2 class="mb-4 text-2xl font-bold">Key Features</h2>
-			<ul class="list-inside list-disc">
-				<li>Personalized workout plans</li>
-				<li>Nutrition tracking and advice</li>
-				<li>Progress monitoring</li>
-				<li>Community support</li>
+			<h2 class="mb-4 text-2xl font-bold">Why Diet Matters</h2>
+			<p>
+				While exercise is important, your diet is the cornerstone of
+				fitness. Here's why:
+			</p>
+			<ul class="mt-2 list-inside list-disc">
+				<li>Weight management is 80% diet, 20% exercise</li>
+				<li>Proper nutrition fuels your workouts and recovery</li>
+				<li>
+					A balanced diet improves overall health and energy levels
+				</li>
+				<li>Consistency in diet is key to long-term success</li>
 			</ul>
 		</div>
 	</section>
