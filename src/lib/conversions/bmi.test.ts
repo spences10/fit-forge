@@ -13,10 +13,10 @@ describe('BMI Calculations', () => {
 
 	test('should return "Invalid unit" for invalid units', () => {
 		expect(calculate_bmi(70, 1.75, 'invalidUnit', 'm')).toBe(
-			'Invalid unit'
+			'Invalid unit',
 		);
 		expect(calculate_bmi(70, 1.75, 'kg', 'invalidUnit')).toBe(
-			'Invalid unit'
+			'Invalid unit',
 		);
 	});
 });
@@ -24,7 +24,7 @@ describe('BMI Calculations', () => {
 describe('BMI Categories', () => {
 	test('should return correct BMI category', () => {
 		expect(get_bmi_category(17)).toBe(
-			'Underweight: BMI less than 18.5'
+			'Underweight: BMI less than 18.5',
 		);
 		expect(get_bmi_category(22)).toBe('Normal weight: BMI 18.5-24.9');
 		expect(get_bmi_category(28)).toBe('Overweight: BMI 25-29.9');

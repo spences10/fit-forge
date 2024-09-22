@@ -21,8 +21,8 @@
 			height_unit === 'cm'
 				? height / 100
 				: height_unit === 'ft'
-				? height * 0.3048
-				: height;
+					? height * 0.3048
+					: height;
 		bmi = calculate_bmi(weight, height, weight_unit, height_unit);
 		category = get_bmi_category(parseFloat(bmi));
 		ideal_weight = get_ideal_weight(height_m, weight_unit);

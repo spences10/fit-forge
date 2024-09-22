@@ -5,7 +5,7 @@ export const calculate_bmi = (
 	weight: number,
 	height: number,
 	weight_unit: string,
-	height_unit: string
+	height_unit: string,
 ) => {
 	const weight_kg = convert_weight(weight_unit, 'kg', weight);
 	const height_m = convert_length(height_unit, 'm', height);
@@ -28,19 +28,19 @@ export const get_bmi_category = (bmi: number) => {
 
 export const get_ideal_weight = (
 	height_m: number,
-	weight_unit: string
+	weight_unit: string,
 ) => {
 	const lower_weight_kg = 18.5 * height_m * height_m;
 	const upper_weight_kg = 24.9 * height_m * height_m;
 	const lower_weight = convert_weight(
 		'kg',
 		weight_unit,
-		lower_weight_kg
+		lower_weight_kg,
 	);
 	const upper_weight = convert_weight(
 		'kg',
 		weight_unit,
-		upper_weight_kg
+		upper_weight_kg,
 	);
 
 	if (lower_weight === null || upper_weight === null) {

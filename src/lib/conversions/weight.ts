@@ -15,7 +15,7 @@ export const weight_units: WeightUnits = {
 export const convert_weight = (
 	from_unit: string,
 	to_unit: string,
-	value: number
+	value: number,
 ): number | null => {
 	if (
 		!weight_units.hasOwnProperty(from_unit) ||

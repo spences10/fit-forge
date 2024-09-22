@@ -16,7 +16,7 @@ export const length_units: LengthUnits = {
 export function convert_length(
 	from_unit: string,
 	to_unit: string,
-	value: number
+	value: number,
 ): number | null {
 	if (
 		!length_units.hasOwnProperty(from_unit) ||
