@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
 	import {
 		calculate_bmi,
 		get_bmi_category,
@@ -12,14 +13,15 @@
 		lower_weight: number;
 		upper_weight: number;
 	} | null>(null);
+	let show_results = $state(false);
 
 	const handle_calculate = () => {
 		const height_m =
 			user_data.height_unit === 'cm'
 				? user_data.height / 100
 				: user_data.height_unit === 'ft'
-					? user_data.height * 0.3048
-					: user_data.height;
+				? user_data.height * 0.3048
+				: user_data.height;
 		bmi = calculate_bmi(
 			user_data.weight,
 			user_data.height,
@@ -28,6 +30,7 @@
 		);
 		category = get_bmi_category(parseFloat(bmi));
 		ideal_weight = get_ideal_weight(height_m, user_data.weight_unit);
+		show_results = true;
 	};
 </script>
 
@@ -66,6 +69,31 @@
 				<li>Consistency in diet is key to long-term success</li>
 			</ul>
 		</div>
+	</section>
+
+	<section>
+		<h2 class="mb-4 text-2xl font-bold">Understanding BMI</h2>
+		<p class="mb-4">
+			Body Mass Index (BMI) is a simple, widely used tool to estimate body fat content and screen for weight categories that may lead to health problems. Here's why calculating your BMI can be helpful:
+		</p>
+		<ul class="list-disc list-inside mb-4">
+			<li>It provides a quick assessment of your body composition</li>
+			<li>It can indicate potential health risks associated with weight</li>
+			<li>It's a starting point for discussions with healthcare professionals</li>
+			<li>It allows you to track changes in your body over time</li>
+		</ul>
+		<p class="mb-4">
+			However, it's important to note that BMI is a general guideline and has limitations:
+		</p>
+		<ul class="list-disc list-inside mb-4">
+			<li>It doesn't distinguish between muscle mass and fat</li>
+			<li>It may not be accurate for athletes or very muscular individuals</li>
+			<li>It doesn't account for body fat distribution</li>
+			<li>It may not be suitable for elderly individuals or those with certain medical conditions</li>
+		</ul>
+		<p>
+			Remember, BMI is just one indicator of health. A high BMI doesn't necessarily mean you're obese, especially if you're tall or have a muscular build. Always consult with a healthcare professional for a comprehensive health assessment.
+		</p>
 	</section>
 
 	<section>
@@ -124,8 +152,8 @@
 			>Calculate BMI</button
 		>
 
-		{#if bmi}
-			<div class="mt-6 rounded-box bg-base-200 p-4">
+		{#if show_results}
+			<div transition:slide={{ duration: 300 }} class="mt-6 rounded-box bg-base-200 p-4">
 				<p class="text-lg font-semibold">
 					Your BMI is {bmi} - {category}
 				</p>
@@ -135,6 +163,9 @@
 						1,
 					)}
 					{user_data.weight_unit}
+				</p>
+				<p class="mt-4 text-sm">
+					Remember, BMI is just one indicator of health. Consider consulting with a healthcare professional for a more comprehensive assessment.
 				</p>
 			</div>
 		{/if}
