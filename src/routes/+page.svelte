@@ -197,7 +197,13 @@
 
 				<div class="rounded-box bg-base-300 p-4">
 					<h3 class="mb-2 text-lg font-semibold">
-						Next Step: Calculate Your Macros
+						Next Step: Calculate Your
+						<a
+							href="/articles/macros-explained"
+							class="link link-primary"
+						>
+							Macros
+						</a>
 					</h3>
 					<p class="mb-4">
 						Now that you know your BMI, it's time to optimize your

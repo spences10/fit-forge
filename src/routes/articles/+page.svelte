@@ -2,35 +2,31 @@
 	let articles = $state([
 		{
 			id: 1,
-			title: 'Understanding BMI',
+			title: 'Understanding Macros: The Building Blocks of Your Diet',
 			excerpt:
-				'Learn about Body Mass Index and its importance in health assessment.',
+				'Learn about proteins, carbohydrates, and fats - the three main types of nutrients that make up the food we eat.',
+			link: '/articles/macros-explained',
 		},
 		{
 			id: 2,
-			title: 'The Importance of Macronutrients',
+			title: 'Timing Your Macros: When to Eat What',
 			excerpt:
-				'Discover how proteins, carbohydrates, and fats contribute to your overall health.',
-		},
-		{
-			id: 3,
-			title: 'Effective Weight Management Strategies',
-			excerpt:
-				'Explore evidence-based approaches to maintaining a healthy weight.',
+				'Discover how to optimize your energy levels, workout performance, and recovery by timing your macro intake.',
+			link: '/articles/macro-timing',
 		},
 	]);
 </script>
 
 <h1 class="mb-6 text-3xl font-bold">Educational Articles</h1>
 
-<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+<div class="grid gap-6 md:grid-cols-2">
 	{#each articles as article}
 		<div class="card bg-base-100 shadow-xl">
 			<div class="card-body">
 				<h2 class="card-title">{article.title}</h2>
 				<p>{article.excerpt}</p>
 				<div class="card-actions justify-end">
-					<button class="btn btn-primary">Read More</button>
+					<a href={article.link} class="btn btn-primary">Read More</a>
 				</div>
 			</div>
 		</div>
