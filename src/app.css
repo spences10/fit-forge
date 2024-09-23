@@ -1,3 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+
 @import 'tailwindcss/utilities';
+
+.all-prose {
+  @apply prose prose-lg lg:prose-xl prose-headings:scroll-mt-16 prose-a:text-primary prose-a:transition hover:prose-a:text-accent;
+}

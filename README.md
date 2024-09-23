@@ -7,7 +7,7 @@ management strategies.
 
 ## Features
 
-- Educational articles and resources on health and fitness.
+- Educational posts and resources on health and fitness.
 - Interactive tools such as a BMI calculator.
 - Community forums for support and discussion.
 - User profiles to track progress and set goals.

@@ -199,7 +199,7 @@
 					<h3 class="mb-2 text-lg font-semibold">
 						Next Step: Calculate Your
 						<a
-							href="/articles/macros-explained"
+							href="/posts/macros-explained"
 							class="link link-primary"
 						>
 							Macros
