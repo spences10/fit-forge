@@ -4,6 +4,7 @@
 		get_bmi_category,
 		get_ideal_weight,
 	} from '$lib';
+	import { convert_length, convert_weight } from '$lib/conversions';
 	import { user_data } from '$lib/user_data.svelte';
 	import { slide } from 'svelte/transition';
 
@@ -31,6 +32,22 @@
 		category = get_bmi_category(parseFloat(bmi));
 		ideal_weight = get_ideal_weight(height_m, user_data.weight_unit);
 		show_results = true;
+	};
+
+	const is_valid_input = () => {
+		const weight_kg =
+			convert_weight(user_data.weight_unit, 'kg', user_data.weight) ??
+			0;
+		const height_cm =
+			convert_length(user_data.height_unit, 'cm', user_data.height) ??
+			0;
+
+		return (
+			weight_kg > 0 &&
+			height_cm > 0 &&
+			weight_kg <= 500 && // Max weight limit in kg
+			height_cm <= 250 // Max height limit in cm
+		);
 	};
 </script>
 
@@ -128,6 +145,7 @@
 						placeholder="Weight"
 						class="input input-bordered w-full rounded-r-none"
 						id="weight"
+						min="1"
 					/>
 					<select
 						bind:value={user_data.weight_unit}
@@ -150,6 +168,7 @@
 						placeholder="Height"
 						class="input input-bordered w-full rounded-r-none"
 						id="height"
+						min="1"
 					/>
 					<select
 						bind:value={user_data.height_unit}
@@ -167,8 +186,10 @@
 		<button
 			onclick={handle_calculate}
 			class="btn btn-primary mt-6 w-full md:w-auto"
-			>Calculate BMI</button
+			disabled={!is_valid_input()}
 		>
+			Calculate BMI
+		</button>
 
 		{#if show_results}
 			<div
