@@ -1,3 +1,10 @@
+---
+title: 'Timing Your Macros: When to Eat What'
+description:
+  'Understanding when to eat certain macronutrients can optimize your
+  energy levels, workout performance, and recovery.'
+---
+
 # Timing Your Macros: When to Eat What
 
 Understanding when to eat certain macronutrients can optimize your

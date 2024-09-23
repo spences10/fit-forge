@@ -1,3 +1,11 @@
+---
+title: 'The 5:2 Method: A Simple Guide to Intermittent Fasting'
+description:
+  'The 5:2 method is a popular intermittent fasting approach that
+  involves eating normally for five days of the week and restricting
+  calorie intake for the remaining two days.'
+---
+
 # The 5:2 Method
 
 The 5:2 method is a popular intermittent fasting approach that

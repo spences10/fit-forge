@@ -1,3 +1,12 @@
+---
+title: 'Leangains Overview: A Simple Guide to Intermittent Fasting'
+description:
+  'Leangains is a popular intermittent fasting protocol developed by
+  Martin Berkhan. It combines fasting periods with strategic eating to
+  optimize muscle gain and fat loss. Here's an overview of the Leangains
+  approach.'
+---
+
 # Leangains Overview
 
 Leangains is a popular intermittent fasting protocol developed by

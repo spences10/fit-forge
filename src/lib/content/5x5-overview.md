@@ -1,3 +1,11 @@
+---
+title: '5x5 Overview: A Simple Guide to Building Strength and Muscle'
+description:
+  'The 5x5 workout program is a strength training regimen designed to
+  build muscle and increase strength. It focuses on compound lifts and
+  progressive overload.'
+---
+
 # 5x5 Overview
 
 The 5x5 workout program is a strength training regimen designed to

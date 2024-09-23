@@ -6,7 +6,16 @@
 	} from '$lib';
 	import { convert_length, convert_weight } from '$lib/conversions';
 	import { user_data } from '$lib/user_data.svelte';
+	import { Head, type SeoConfig } from 'svead';
 	import { slide } from 'svelte/transition';
+
+	const seo_config: SeoConfig = {
+		title: 'Fit Forge - Your No-Nonsense Guide to Getting Fit',
+		description:
+			'Fit Forge is designed for developers and other sedentary professionals who want to improve their fitness without the fluff.',
+		url: 'https://fit-forge.pages.dev/',
+		site_name: 'Fit Forge',
+	};
 
 	let bmi = $state('');
 	let category = $state('');
@@ -50,6 +59,8 @@
 		);
 	};
 </script>
+
+<Head {seo_config} />
 
 <div class="space-y-12">
 	<section class="text-center">

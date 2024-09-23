@@ -1,3 +1,12 @@
+---
+title: 'Intermittent Fasting Benefits'
+description:
+  'Intermittent fasting (IF) is an eating pattern that cycles between
+  periods of fasting and eating. It doesn't specify which foods to eat
+  but rather when you should eat them. Here are some benefits of
+  intermittent fasting.'
+---
+
 # Intermittent Fasting Benefits
 
 Intermittent fasting (IF) is an eating pattern that cycles between

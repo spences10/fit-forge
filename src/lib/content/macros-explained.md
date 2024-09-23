@@ -1,3 +1,12 @@
+---
+title: 'Understanding Macros: The Building Blocks of Your Diet'
+description:
+  'Macros, short for macronutrients, are the three main types of
+  nutrients that make up the food we eat: proteins, carbohydrates, and
+  fats. Understanding macros can help you make better food choices and
+  achieve your fitness goals.'
+---
+
 # Understanding Macros: The Building Blocks of Your Diet
 
 Macros, short for macronutrients, are the three main types of
