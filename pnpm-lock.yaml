@@ -908,7 +908,7 @@ packages:
     resolution: {integrity: sha512-zMO2KdYy6mx56btx9JvAqAZ6EyS3g49krMPPrgOp1yxGZiA93HumGk+bZ5jIZtOg5/VBYl5eBmGRQHqq4FG6uQ==}
     dependencies:
       '@vitest/pretty-format': 2.1.2
-      loupe: 3.1.1
+      loupe: 3.1.2
       tinyrainbow: 1.2.0
     dev: true
 
@@ -1086,7 +1086,7 @@ packages:
       assertion-error: 2.0.1
       check-error: 2.1.1
       deep-eql: 5.0.2
-      loupe: 3.1.1
+      loupe: 3.1.2
       pathval: 2.0.0
     dev: true
 
@@ -1587,10 +1587,6 @@ packages:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
     dev: true
 
-  /get-func-name@2.0.2:
-    resolution: {integrity: sha512-8vXOvuE167CtIc3OyItco7N/dpRtBbYOsPsXCz7X/PMnlGjYjSGuZJgM1Y7mmew7BKf9BqvLX2tnOVy1BBUsxQ==}
-    dev: true
-
   /github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
     dev: true
@@ -1838,10 +1834,8 @@ packages:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
 
-  /loupe@3.1.1:
-    resolution: {integrity: sha512-edNu/8D5MKVfGVFRhFf8aAxiTM6Wumfz5XsaatSxlD3w4R1d/WEKUTydCdPGbl9K7QG/Ca3GnDV2sIKIpXRQcw==}
-    dependencies:
-      get-func-name: 2.0.2
+  /loupe@3.1.2:
+    resolution: {integrity: sha512-23I4pFZHmAemUnz8WZXbYRSKYj801VDaNv9ETuMh7IrMc7VuVVSo+Z9iLE3ni30+U48iDWfi30d3twAXBYmnCg==}
     dev: true
 
   /lru-cache@10.4.3:
