@@ -40,7 +40,7 @@ devDependencies:
     version: 2.44.1(eslint@9.11.1)(svelte@5.0.0-next.262)
   globals:
     specifier: ^15.10.0
-    version: 15.10.0
+    version: 15.11.0
   mdsvex:
     specifier: ^0.12.3
     version: 0.12.3(svelte@5.0.0-next.262)
@@ -1615,8 +1615,8 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /globals@15.10.0:
-    resolution: {integrity: sha512-tqFIbz83w4Y5TCbtgjZjApohbuh7K9BxGYFm7ifwDR240tvdb7P9x+/9VvUKlmkPoiknoJtanI8UOrqxS3a7lQ==}
+  /globals@15.11.0:
+    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
     dev: true
 
