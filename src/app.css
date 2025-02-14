@@ -1,8 +1,14 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import 'tailwindcss';
 
-@import 'tailwindcss/utilities';
+/* Custom components */
+@layer components {
+	.all-prose {
+		@apply prose prose-lg lg:prose-xl prose-headings:scroll-mt-16 prose-a:text-primary prose-a:transition prose-a:hover:text-accent max-w-none;
+	}
+}
 
-.all-prose {
-  @apply prose prose-lg lg:prose-xl prose-headings:scroll-mt-16 prose-a:text-primary prose-a:transition hover:prose-a:text-accent;
+/* Plugin configurations */
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+	themes: garden --default;
 }

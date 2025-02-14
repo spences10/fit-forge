@@ -102,7 +102,7 @@
 
 {#if user_data.macros}
 	{#if !show_leangains}
-		<div class="mt-6 rounded-box bg-base-200 p-4">
+		<div class="rounded-box bg-base-200 mt-6 p-4">
 			<h2 class="mb-2 text-xl font-semibold">Your Daily Macros</h2>
 			<p>Calories: {user_data.macros.standard.calories} kcal</p>
 			<p>Protein: {user_data.macros.standard.protein}g</p>
