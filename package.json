@@ -44,7 +44,7 @@
 		"prettier-plugin-tailwindcss": "^0.6.14",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-slug": "^6.0.0",
-		"svead": "^0.0.13",
+		"svead": "^0.0.15",
 		"svelte": "^5.39.6",
 		"svelte-check": "^4.3.2",
 		"tailwindcss": "^4.1.13",
